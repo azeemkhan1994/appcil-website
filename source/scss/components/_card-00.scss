@@ -1,0 +1,9 @@
+.card-00 {
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08);
+    background-color: $secondary-color;
+    padding: 10px;
+    border-radius: 5px;
+    &.card-00-header {
+        display: flex;
+    }
+}
