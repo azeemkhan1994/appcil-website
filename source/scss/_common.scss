@@ -219,3 +219,16 @@ button:focus,
 .slick-slide:focus {
   outline: 0;
 }
+
+
+.theme-stroke {
+  stroke: $primary-color !important;
+}
+
+.slick-dots li button::before {
+  content: '';
+  height: 5px;
+  width: 25px;
+  background-color: $primary-color;
+  opacity: 0.3;
+}

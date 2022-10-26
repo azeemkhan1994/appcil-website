@@ -70,6 +70,11 @@
       });
     }
 
+    $('.hero-slider').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+    })
+
     // -----------------------------
     //  Testimonial Slider
     // -----------------------------
@@ -105,7 +110,7 @@
     //  Count Down JS
     // -----------------------------
     var syoTimer = $('#simple-timer');
-    if (syoTimer) {
+    if (syoTimer.length !== 0) {
       $('#simple-timer').syotimer({
         year: 2023,
         month: 9,
@@ -140,7 +145,6 @@
       autoplaySpeed: 2000,
       dots: true
     });
-
 
     // -----------------------------
     //  Client Slider
@@ -190,7 +194,31 @@
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
+      dots: true,
     });
+
+    const path = window.location.pathname;
+    const page = path.split("/").pop().split(".")[0];
+
+    if (page === "about") {
+      document.documentElement.style.setProperty('--primary-color', 'var(--primary-color-2)');
+    }
+
+    if (page === "services") {
+      document.documentElement.style.setProperty('--primary-color', 'var(--primary-color-3)');
+    }
+
+    if (page === "portfolio") {
+      document.documentElement.style.setProperty('--primary-color', 'var(--primary-color-4)');
+    }
+
+    if (page === "contact") {
+      document.documentElement.style.setProperty('--primary-color', 'var(--primary-color-5)');
+    }
+
+    if ($("#loading-spinner").length !== 0) {
+      $("#loading-spinner").css({ display: 'none' })
+    }
 
 
     // scroll

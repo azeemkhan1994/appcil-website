@@ -21,8 +21,9 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- CUSTOM CSS -->
@@ -35,7 +36,7 @@
 <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 shadow">
   <div class="container">
     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fas fa-bars"></span>
     </button>
@@ -56,51 +57,147 @@
         <li class="nav-item dropdown @@contact">
           <a class="nav-link" href="../../contact.html">Contact Us</a>
         </li>
-        <li>
-          <a data-toggle="modal" data-target="#form-modal" class="btn btn-main-sm black-hover">Get in touch</a>
+        <li class="nav-item text-center ms-0 ms-lg-3">
+          <a data-bs-toggle="modal" data-bs-target="#form-modal" class="btn btn-main-sm black-hover">
+            Get in touch</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="loading" id="loading-spinner">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
 <!--====  Start of Hero Section  ====-->
-<section class="section header-container banner-img">
-	<div class="shapes-container">
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-		<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
-		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
-		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
-		<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
-		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
-		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
-	</div>
-	<div class="position-relative zindex-2">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-6 order-2 order-md-1 text-center text-md-start">
-					<h1 class="text-white fw-bold mb-4">Showcase your app with Appcil</h1>
-					<p class="text-white mb-5">Besides its beautiful design. Appcil is an incredibly software
-						developement
-						company to showcase your App.</p>
-					<a data-toggle="modal" data-target="#form-modal" class="btn btn-main-md white-hover">Get a Quote</a>
-				</div>
-				<div class="col-md-6 text-center order-1 order-md-2">
-					<img class="img-fluid" src="images/mobile.png" alt="screenshot">
+<div class="hero-slider">
+	<section class="section header-container header-img-1">
+		<div class="shapes-container d-none">
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+			<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+			<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+		</div>
+		<div class="position-relative zindex-2">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-8 order-2 order-md-1 text-center text-md-start">
+						<h1 class="text-white fw-bold mb-4">
+							We Emphasise New Technologies For Digital Business Transformation
+						</h1>
+						<p class="text-white mb-5">
+							With our unique and highly experienced team, we integrate technologies as close to human
+							nature.
+						</p>
+						<a data-bs-toggle="modal" data-bs-target="#form-modal" class="btn btn-main-md white-hover">
+							Get a Quote
+						</a>
+					</div>
+					<div class="col-md-4 text-center order-1 order-md-2">
+						<img class="img-fluid" src="images/projects/100-days-portfolio.png" alt=" screenshot">
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+	<section class="section header-container header-img-2">
+		<div class="shapes-container d-none">
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+			<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+			<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+		</div>
+		<div class="position-relative zindex-2">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-8 order-2 order-md-1 text-center text-md-start">
+						<h1 class="text-white fw-bold mb-4">
+							Appcil Works Passionately With Software And Application Development
+						</h1>
+						<p class="text-white mb-5">
+							We build superior digital apps and empower the user experiences across the mobile app world.
+						</p>
+						<a data-bs-toggle="modal" data-bs-target="#form-modal" class="btn btn-main-md white-hover">
+							Build Your App
+						</a>
+					</div>
+					<div class="col-md-4 text-center order-1 order-md-2">
+						<img class="img-fluid" src="images/projects/fujairah-portfolio.png" alt="screenshot">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section header-container header-img-3">
+		<div class="shapes-container d-none">
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+			<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+			<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+			<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+			<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+			<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+		</div>
+		<div class="position-relative zindex-2">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-8 order-2 order-md-1 text-center text-md-start">
+						<h1 class="text-white fw-bold mb-4">
+							Mobile Application Development Using New Methods
+						</h1>
+						<p class="text-white mb-5">
+							Our experts work on the latest methods like DevOps, which is a unique method that focuses
+							mainly on the effective collaboration between software developers, project managers,
+							contributors, and technologies.
+						</p>
+						<a data-bs-toggle="modal" data-bs-target="#form-modal" class="btn btn-main-md white-hover">
+							Connect with Expert
+						</a>
+					</div>
+					<div class="col-md-4 text-center order-1 order-md-2">
+						<img class="img-fluid" src="images/projects/mofa-porfolio.png" alt="screenshot">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
 <!--====  End of Hero Section  ====-->
 
 <!--====  Start of Services  ====-->
@@ -332,13 +429,86 @@
             <ul class="tab-navbar">
                 <li>
                     <a class="active" id="ai-tab" data-custom-target="ai-box">
-                        <img src="images//icons/ai-o.svg" width="80" height="auto" alt="artificial-intelligence"
-                            srcset="" />
+                        <!-- <div class="pb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <style type="text/css">
+        .ai-st0 {
+            fill: #323232;
+        }
+
+        .ai-st1 {
+            fill: none;
+            stroke: var(--primary-color);
+            stroke-width: 0.875;
+            stroke-miterlimit: 8.75;
+        }
+
+        .ai-st2 {
+            fill: none;
+            stroke: #FFFFFF;
+            stroke-miterlimit: 10;
+        }
+
+        .ai-st3 {
+            fill: none;
+            stroke: #323232;
+            stroke-width: 0.875;
+            stroke-miterlimit: 8.75;
+        }
+
+        .ai-st4 {
+            fill: var(--primary-color);
+        }
+    </style>
+    <path class="ai-st0" d="M42.7,12.8c0-3.4,0.3-10.3-9.2-10.3c-7.5,0-14.4,7.6-14.6,12.1c-5.7,0.7-11.1,6-10.3,12.6
+	c-5.4,2.5-9.3,15.8-2.3,22.2C5,54.9,8.9,67.3,20.7,66.3c2.9,14.5,22,14.1,22,3.4v-8.5 M18.9,14.6" />
+    <path class="ai-st1"
+        d="M19.5,36.8c3.1,1.9,8.3,1.1,11.1-1.6c2.1-2,4.3-5.3,6.6-5.1h29.3 M33.5,61.5c1.3-3,4.6-3.7,9.2-3.7h23.8" />
+    <path class="ai-st2" d="M23.4,56.6c-3.1-0.5-5.8-3.2-5.8-5.4 M20.7,66.3c0-6.6,4-15.2,14.2-15.2" />
+    <path class="ai-st1"
+        d="M13.8,31.6c3.2,0,5.8,2.1,5.8,5.1c0,2.4-1.6,4.7-3.8,5.4 M53.7,16.2h-11c-5,0-9.9-0.7-11.6-4.7" />
+    <line class="ai-st3" x1="42.7" y1="43.9" x2="53.7" y2="43.9" />
+    <line class="ai-st3" x1="42.4" y1="71.5" x2="53.6" y2="71.5" />
+    <path class="ai-st4"
+        d="M77.5,30c0,2.9-2.5,5.2-5.5,5.2c-3,0-5.5-2.3-5.5-5.2c0-2.9,2.5-5.2,5.5-5.2C75,24.9,77.5,27.2,77.5,30z" />
+    <path class="ai-st4"
+        d="M64.6,16.2c0,2.9-2.5,5.2-5.5,5.2c-3,0-5.5-2.3-5.5-5.2s2.5-5.2,5.5-5.2C62.2,11.1,64.6,13.4,64.6,16.2z" />
+    <path class="ai-st0"
+        d="M64.6,43.9c0,2.9-2.5,5.2-5.5,5.2c-3,0-5.5-2.3-5.5-5.2s2.5-5.2,5.5-5.2C62.2,38.8,64.6,41.1,64.6,43.9z" />
+    <ellipse class="ai-st0" cx="59.1" cy="71.5" rx="5.5" ry="5.2" />
+    <ellipse class="ai-st4" cx="72" cy="57.7" rx="5.5" ry="5.2" />
+    <path class="ai-st2" d="M31.7,24.9c-6.7,0-12.8-1-12.8-10.3" />
+</svg>
+                        </div> -->
+                        <img src="images/icons/ai-o.svg" width="80" height="auto" alt="artificial-intelligence" />
                         <span>Artificial Intelligence</span>
                     </a>
                 </li>
                 <li>
                     <a id="iot-tab" data-custom-target="iot-box">
+                        <!-- <div class="pb-3">
+                            <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+    <path fill="none" stroke="var(--primary-color)" stroke-linejoin="round"
+        d="M47.8,19.9h1.7l8.7-8.7 M58.3,68.8L47.8,58.3" />
+    <path fill="none" stroke="#323232" stroke-meterlimit="10"
+        d="M39.1,47.8h-1.7c-4.8,0-8.7-3.9-8.7-8.7s3.9-8.7,8.7-8.7h14l7-7H67" />
+    <polyline fill="none" stroke="#323232" stroke-meterlimit="10" points="67,56.6 60.1,56.6 51.3,47.8 49.6,47.8 " />
+    <circle fill="var(--primary-color)" cx="61.8" cy="7.7" r="5.2" />
+    <circle fill="#323232" cx="72.3" cy="23.4" r="5.2" />
+    <circle fill="var(--primary-color)" cx="72.3" cy="39.1" r="5.2" />
+    <path fill="#323232"
+        d="M77.5,56.6c0,2.9-2.3,5.2-5.2,5.2S67,59.5,67,56.6c0-2.9,2.3-5.2,5.2-5.2S77.5,53.7,77.5,56.6L77.5,56.6z" />
+    <path fill="var(--primary-color)"
+        d="M67,72.3c0,2.9-2.3,5.2-5.2,5.2s-5.2-2.3-5.2-5.2c0-2.9,2.3-5.2,5.2-5.2S67,69.4,67,72.3L67,72.3z" />
+    <line fill="none" stroke="var(--primary-color)" stroke-linejoin="round" x1="49.6" y1="39.1" x2="65.3" y2="39.1" />
+    <line fill="none" stroke="var(--primary-color)" stroke-linejoin="round" x1="35.6" y1="39.1" x2="39.1" y2="39.1" />
+    <line fill="none" stroke="var(--primary-color)" stroke-linejoin="round" x1="42.6" y1="39.1" x2="46.1" y2="39.1" />
+    <line fill="none" stroke="#323232" stroke-meterlimit="10" x1="42.6" y1="47.8" x2="46.1" y2="47.8" />
+    <path fill="#323232" d="M44.4,19.6V13V4.2h-14v7.9c-2.5,0.6-4.9,1.6-7.2,3l-5.6-5.6l-9.9,9.9l5.6,5.6c-1.3,2.2-2.3,4.7-3,7.2H2.5v14
+	h7.9c0.6,2.5,1.6,4.9,3,7.2l-5.6,5.6l9.9,9.9l5.6-5.6c2.2,1.3,4.7,2.3,7.2,3V74h14v-8.7v-6.8h-7.1c-10.7,0-19.3-8.7-19.3-19.3
+	s8.7-19.3,19.3-19.3L44.4,19.6z" />
+</svg>
+                        </div> -->
                         <img src="images/icons/iot.svg" width="80" height="auto" alt="" srcset="" />
                         <span>Internet of Things</span>
                     </a>
@@ -519,20 +689,24 @@
             <div class="form-group">
                 <select id="exampleInterested" class="form-select" aria-label="Default select example" name="Interested"
                     required="">
-                    <option value="Native iOS Application">Native iOS
-                        Application
+                    <option value="Native Mobile Application">
+                        Native Mobile Application
                     </option>
-                    <option value="Hybird iOS Application">Hybird iOS
-                        Application
+                    <option value="Hybird Mobile Application">
+                        Hybird Mobile Application
                     </option>
-                    <option value="iOS Game Development">iOS Game Development
+                    <option value="Game Development">
+                        Game Development
                     </option>
                     <option value="UI/Ux Design">UI/Ux Design</option>
-                    <option value="Support and Maintenance">Support and Maintenance
+                    <option value="Support and Maintenance">
+                        Support and Maintenance
                     </option>
-                    <option value="Hire a iOS Developer">Hire iOS Developer
+                    <option value="Hire a Developer">
+                        Hire Developer
                     </option>
-                    <option value="Other">Other
+                    <option value="Others">
+                        Others
                     </option>
                 </select>
             </div>
@@ -738,17 +912,12 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Android Developer</h5>
-                <button type="button" class="close" data-dismiss="modal">
+                <h5 class="modal-title">GET A FREE QUOTE</h5>
+                <button type="button" class="close" data-bs-dismiss="modal">
                     <span>&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Applictaion Title -->
-                <div class="form-title">
-                    <h3>Apply Now</h3>
-                </div>
-                <!-- Application Form -->
                 <form>
     <div class="row g-3">
         <div class="col-12">
@@ -771,20 +940,24 @@
             <div class="form-group">
                 <select id="exampleInterested" class="form-select" aria-label="Default select example" name="Interested"
                     required="">
-                    <option value="Native iOS Application">Native iOS
-                        Application
+                    <option value="Native Mobile Application">
+                        Native Mobile Application
                     </option>
-                    <option value="Hybird iOS Application">Hybird iOS
-                        Application
+                    <option value="Hybird Mobile Application">
+                        Hybird Mobile Application
                     </option>
-                    <option value="iOS Game Development">iOS Game Development
+                    <option value="Game Development">
+                        Game Development
                     </option>
                     <option value="UI/Ux Design">UI/Ux Design</option>
-                    <option value="Support and Maintenance">Support and Maintenance
+                    <option value="Support and Maintenance">
+                        Support and Maintenance
                     </option>
-                    <option value="Hire a iOS Developer">Hire iOS Developer
+                    <option value="Hire a Developer">
+                        Hire Developer
                     </option>
-                    <option value="Other">Other
+                    <option value="Others">
+                        Others
                     </option>
                 </select>
             </div>
@@ -916,13 +1089,8 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script src="../plugins/syotimer/jquery.syotimer.min.js"></script>
-<!-- google map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
-<script src="plugins/google-map/gmap.js"></script>
 
 <script src="js/script.js"></script>
 </body>

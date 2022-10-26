@@ -1,15 +1,40 @@
+:root {
+    --primary-color-1: #0C9CFF;
+    --primary-color-2: #bf2727;
+    --primary-color-3: #15b32f;
+    --primary-color-4: #FF8A0D;
+    --primary-color-5: #bf2727;
+    
+    --body-color: #ffffff;
+    --primary-color: var(--primary-color-1);
+
+
+    --secondary-color: #fff;
+    --border-color: #ccc;
+    --text-color: #808080;
+    --title-color: #757575;
+
+    --gray: #808080;
+    --light-gray: #fafafa;
+    --dark: #000;
+    --light: #fff;
+    --black: #000;
+}
+
 // Variables
-$body-color: #ffffff;
-$primary-color: #0C9CFF;
-$secondary-color: #fff;
-$border-color:#cccccc;
+$body-color: var(--body-color);
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$border-color:var(--border-color);
 $primary-font: 'Open Sans', sans-serif;
 $secondary-font: 'Lora', serif;
-$text-color: #808080;
-$title-color: #757575;
-$gray: #808080;
-$light-gray: #fafafa;
-$dark: #000;
-$light: #fff;
-$black: #000;
-// $icon-font: 'themefisher-font';
+$text-color: var(--text-color);
+$title-color: var(--title-color);
+$gray: var(--gray);
+$light-gray: var(--light-gray);
+$dark: var(--dark);
+$light: var(--light);
+$black: var(--black);
+
+
+

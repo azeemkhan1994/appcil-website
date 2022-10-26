@@ -1,0 +1,16 @@
+.loading {
+    background-color: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+
+    .spinner-border {
+        color: $primary-color;
+    }
+}
